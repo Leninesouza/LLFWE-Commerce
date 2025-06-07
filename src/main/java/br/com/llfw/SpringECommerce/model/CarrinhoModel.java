@@ -1,7 +1,13 @@
 package br.com.llfw.SpringECommerce.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
+@Entity 
 public class CarrinhoModel {
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idProduto;
     private String nome;
     private String quantidade;
@@ -11,8 +17,7 @@ public class CarrinhoModel {
 
     }
 
-    public CarrinhoModel(int idProduto, String nome, String quantidade, String preco) {
-        this.idProduto = idProduto;
+    public CarrinhoModel( String nome, String quantidade, String preco) {
         this.nome = nome;
         this.quantidade = quantidade;
         this.preco = preco;

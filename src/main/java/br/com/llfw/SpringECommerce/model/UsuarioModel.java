@@ -1,6 +1,13 @@
 package br.com.llfw.SpringECommerce.model;
 
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+@Entity
 public class UsuarioModel {
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private boolean admin;
     private String nome;
@@ -17,9 +24,8 @@ public class UsuarioModel {
 
     }
 
-    public UsuarioModel(int id, boolean admin, String nome, String sobrenome, String email, String celular, String genero,
+    public UsuarioModel( boolean admin, String nome, String sobrenome, String email, String celular, String genero,
                    String estado, String cidade, String rua, String senha) {
-        this.id = id;
         this.admin = admin;
         this.nome = nome;
         this.sobrenome = sobrenome;

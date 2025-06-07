@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/cadastrobonito.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastre-se - Spartan Gaming</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Seção da imagem -->
+        <div class="image-section">
+            <img src="/placeholder.svg?height=600&width=400" alt="Guerreiro Samurai">
+        </div>
+        
+        <!-- Seção do formulário -->
+        <div class="form-section">
+            <div class="header">
+                <h1>Cadastre-se</h1>
+                <a href="index.html" class="login-btn">Entrar</a>
+            </div>
+            
+            <form id="cadastroForm" action="#" method="post">
+                <div class="form-grid">
+                    <!-- Primeira linha -->
+                    <div class="form-group">
+                        <label for="primeiroNome">Primeiro Nome:</label>
+                        <input type="text" id="primeiroNome" name="primeiroNome" placeholder="Digite seu primeiro nome" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="sobrenome">Sobrenome:</label>
+                        <input type="text" id="sobrenome" name="sobrenome" placeholder="Digite seu sobrenome" required>
+                    </div>
+                    
+                    <!-- Segunda linha -->
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="celular">Celular:</label>
+                        <input type="tel" id="celular" name="celular" placeholder="(99) 9999-9999" required>
+                    </div>
+                    
+                    <!-- Terceira linha -->
+                    <div class="form-group">
+                        <label for="estado">Estado:</label>
+                        <input type="text" id="estado" name="estado" placeholder="Digite seu estado" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="cidade">Cidade:</label>
+                        <input type="text" id="cidade" name="cidade" placeholder="Digite sua cidade" required>
+                    </div>
+                    
+                    <!-- Quarta linha -->
+                    <div class="form-group">
+                        <label for="rua">Rua:</label>
+                        <input type="text" id="rua" name="rua" placeholder="Digite sua rua" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="senha">Senha:</label>
+                        <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+                    </div>
+                    
+                    <!-- Gênero -->
+                    <div class="gender-group">
+                        <label>Gênero:</label>
+                        <div class="gender-options">
+                            <div class="gender-option">
+                                <input type="radio" id="masculino" name="genero" value="masculino" checked>
+                                <label for="masculino">Masculino</label>
+                            </div>
+                            
+                            <div class="gender-option">
+                                <input type="radio" id="feminino" name="genero" value="feminino">
+                                <label for="feminino">Feminino</label>
+                            </div>
+                            
+                            <div class="gender-option">
+                                <input type="radio" id="outros" name="genero" value="outros">
+                                <label for="outros">Outros</label>
+                            </div>
+                            
+                            <div class="gender-option">
+                                <input type="radio" id="prefiroNaoDizer" name="genero" value="prefiroNaoDizer">
+                                <label for="prefiroNaoDizer">Prefiro não dizer</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Botão de cadastro -->
+                    <button type="submit" class="submit-btn">Cadastrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Validação simples do formulário
+        document.getElementById('cadastroForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Cadastro realizado com sucesso!');
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>

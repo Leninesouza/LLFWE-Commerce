@@ -1,6 +1,13 @@
 package br.com.llfw.SpringECommerce.model;
 
+
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
 public class ProdutosModel {
+    @Id 
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String nome;
     private String marca;

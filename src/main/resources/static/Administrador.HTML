@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/administradorbonito.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador - Spartan Gaming</title>
+        
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <img src="/img/spartan-logo-removebg-preview.png" alt="Spartan Logo">
+            <a href=""></a>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar...">
+            <span class="search-icon">🔍</span>
+        </div>
+        <div class="nav-links">
+            <a href="cadastro.HTML">Cadastro</a>
+            <a href="Produtos.HTML">Produtos</a>
+            <a href="Administrador.HTML">Administrador</a>
+        </div>
+        <a href="Login.html" class="login-btn" ><div>Login</div></a>
+    </header>
+    
+    <!-- Admin Navigation -->
+    <nav class="admin-nav">
+        <a href="#" class="active">Add/Produtos</a>
+        <a href="#">Altera/Produtos</a>
+        <a href="#">Usuario</a>
+        <a href="#">Relatório</a>
+    </nav>
+    
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="form-card">
+            <h2>Cadastro de Produtos</h2>
+            <form id="productForm">
+                <div class="form-group">
+                    <label for="productName">Nome do produto:</label>
+                    <input type="text" id="productName" name="productName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="productBrand">Marca do Produto:</label>
+                    <input type="text" id="productBrand" name="productBrand" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="productModel">Modelo do Produto:</label>
+                    <input type="text" id="productModel" name="productModel" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="productStock">Quantidade em Estoque:</label>
+                    <input type="number" id="productStock" name="productStock" min="0" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="productDescription">Descrição do Produto:</label>
+                    <textarea id="productDescription" name="productDescription" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="productPrice">Valor do Produto:</label>
+                    <input type="text" id="productPrice" name="productPrice" required>
+                </div>
+                
+                <button type="submit" class="submit-btn">Cadastrar Produto</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Validação simples do formulário
+        document.getElementById('productForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Produto cadastrado com sucesso!');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
